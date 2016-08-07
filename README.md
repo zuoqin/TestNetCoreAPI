@@ -1,7 +1,7 @@
 # Bearer Token
 ## Creating Bearer Token
-POST http://localhost:5000/token 
-Content-Type: application/x-www-form-urlencoded 
+POST http://localhost:5000/token  
+Content-Type: application/x-www-form-urlencoded  
 
 username=TEST&password=TEST123
 
