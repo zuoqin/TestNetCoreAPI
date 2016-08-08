@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using Newtonsoft.Json;
 using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
-    [Authorize]
+    //[Authorize]
     public class ValuesController : Controller
     {
         // GET api/values
@@ -18,7 +15,7 @@ namespace WebApplication1.Controllers
         public IEnumerable<emphr> Get()
         {
             using (var db = new HRMSDBContext())
-            {
+            {                
                 var emphrs = db.emphrs
                     .Where(b => b.empid > 0)
                     .OrderBy(b => b.empcode)
